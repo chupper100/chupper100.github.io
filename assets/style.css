@@ -75,7 +75,7 @@ nav a:hover, nav a:active {
 .content div {
     margin: 15px;
 }
-.content .intro {
+.content #intro {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
