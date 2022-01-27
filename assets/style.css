@@ -4,9 +4,24 @@
 :root {
     --border-radius:5px;
     --nav-bar-height: 70px;
-    --font-size: 30px;
+    --font-size: 32px;
+
+    --background_color: white;
+    --text_color: black;
+    --text_hover_color: rgb(0,100,200);
+    --body_background_color: white;
 
     --primary-color: #57e089;
+}
+
+[data-theme="dark"] {
+    --background_color: #121212;
+    --text_color: white;
+    --text_hover_color: rgb(0,100,200);
+    --body_background_color: black;
+
+    --primary-color: #57e089;
+
 }
 
 * {
@@ -15,21 +30,29 @@
     margin: 0px;
 }
 
+body {
+    background-color: var(--body_background_color);
+}
+
 html {
     scroll-behavior:smooth;
 }
 
 h1, h2, h3 {
+    color: var(--text_color);
     font-weight: 500;
     font-family: 'Roboto', sans-serif;
 }
-a,li,p {
+a,li,p,label {
+    color: var(--text_color);
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     list-style: none;
     text-decoration: none;
     transition: all .1s ease;
+    font-size: var(--font-size);
 }
+
 nav {
     display: flex;
     margin: 0px 0px;
@@ -59,11 +82,12 @@ nav li {
 nav a {
     font-size: var(--font-size);
     font-weight: 300;
-    color:black;
     padding: 5px;
     border-radius: var(--border-radius); 
 }
-
+nav li a, nav a, nav label {
+    font-size: var(--font-size);
+}
 nav a:hover, nav a:active {
     color:var(--primary-color);
 }
@@ -71,10 +95,13 @@ nav a:hover, nav a:active {
 .content {
     display: flex;
     justify-content: space-around;
+    flex-direction: column;
     margin-top: calc(var(--nav-bar-height) + 50px);
 }
 .content div {
     margin: 15px;
+    float: left;
+    max-width: 500px;
 }
 .content #intro {
     display: flex;
@@ -87,10 +114,44 @@ nav a:hover, nav a:active {
 .content p {
     font-size: calc(var(--font-size) - 2px) ;
 }
+footer {
+    background-color: var(--background_color);
+    position:absolute;
+    bottom: 5px;left:0px;right:0px;
+    padding: 15px;
+}
 
-@media screen and (max-width:720px) {
+@media screen and (max-width:1024px) {
+    nav {
+        padding: 0px 0px;
+        bottom:0px;
+        background-color: var(--background_color);
+        position:fixed;
+    }
+    
     nav li {
         margin: 10px 25px;
+    }
+    nav li a, nav a, nav label {
+        font-size: var(--font-size);
+    }
+    .content {
+        margin-top:10px;
+        margin-bottom:var(--nav-bar-height);
+    }
+    .content div {
+        margin: 15px;
+        float: left;
+        max-width: none;
+    }
+
+    footer {
+        bottom: var(--nav-bar-height);
+    }
+}
+@media screen and (max-width:720px) {
+    nav li a, nav a, nav label {
+        font-size: calc(var(--font-size) - 3px);
     }
 }
 

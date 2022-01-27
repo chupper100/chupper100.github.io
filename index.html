@@ -13,8 +13,8 @@
 <body>
     <div class="wrapper">
         <nav>
-            <li style="float: left;"><a href="#">Home</a></li>
             <ul class="nav_links">
+                <li style="float: left;"><a href="#intro">Home</a></li>
                 <li><a href="#about-me">About Me</a></li>
                 <li><a href="#contact">Contact</a>
                 </li>
@@ -22,7 +22,7 @@
         </nav>
         <div class="content">
             <div id="intro">
-                <div class="text" style="float: left; max-width: 500px;">
+                <div class="text">
                     <h2>Hi, I am Dat</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque velit, quas similique ad,
                         praesentium
@@ -34,16 +34,46 @@
                     alt="img" />
             </div>
             <div id="about-me">
-
+                <h1>
+                    About Me
+                </h1>
             </div>
             <div id="contact">
-
+                <h1>Contact</h1>
             </div>
         </div>
         <footer>
-
+            <div class="theme-switch-wrapper">
+                <label for="checkbox" class="theme-switch"> Dark Mode
+                    <input type="checkbox" name="" id="checkbox">
+                    <div class="slider round"></div>
+                </label>
+            </div>
         </footer>
     </div>
+    <script>
+        const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+        const currentTheme = localStorage.getItem('theme');
+
+        if (currentTheme) {
+            document.documentElement.setAttribute('data-theme', currentTheme);
+            if (currentTheme === 'dark') {
+                toggleSwitch.checked = true;
+            }
+        }
+
+        function switchTheme(e) {
+            if (e.target.checked) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+            }
+        }
+
+        toggleSwitch.addEventListener('change', switchTheme);
+    </script>
 </body>
 
 </html>
