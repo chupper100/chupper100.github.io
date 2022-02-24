@@ -87,7 +87,7 @@ nav a:hover, nav a:active {
     display: flex;
     justify-content: space-around;
     flex-direction: column;
-    margin-top: calc(var(--nav-bar-height) + 50px);
+    /* margin-top: calc(var(--nav-bar-height) + 50px); */
 }
 .content div {
     margin: 50px;
