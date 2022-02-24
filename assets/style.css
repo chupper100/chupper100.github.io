@@ -90,7 +90,7 @@ nav a:hover, nav a:active {
     margin-top: calc(var(--nav-bar-height) + 50px);
 }
 .content div {
-    margin: 15px;
+    margin: 50px;
     float: left;
 }
 .content #intro {
