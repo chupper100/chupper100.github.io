@@ -20,7 +20,12 @@
 }
 
 body {
+    display: flex;
     background-color: var(--body_background_color);
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
 }
 
 html {
@@ -105,7 +110,7 @@ footer {
     padding: 50px;
 }
 
-@media screen and (max-width:1024px) {
+@media screen and (max-width:720px) {
     nav {
         padding: 0px 0px;
         bottom:0px;
