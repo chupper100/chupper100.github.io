@@ -92,7 +92,6 @@ nav a:hover, nav a:active {
 .content div {
     margin: 15px;
     float: left;
-    max-width: 500px;
 }
 .content #intro {
     display: flex;
