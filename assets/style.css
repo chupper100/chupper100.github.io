@@ -11,16 +11,6 @@
     --primary-color: #57e089;
 }
 
-[data-theme="dark"] {
-    --background_color: #121212;
-    --text_color: white;
-    --text_hover_color: rgb(0,100,200);
-    --body_background_color: black;
-
-    --primary-color: #57e089;
-
-}
-
 * {
     -webkit-tap-highlight-color: transparent;
     padding: 0px;
@@ -154,4 +144,16 @@ footer {
     nav li {
         margin: 5px 15px;
     }
+}
+
+@media (prefers-color-scheme) {
+    *{
+        --background_color: #121212;
+        --text_color: white;
+        --text_hover_color: rgb(0,100,200);
+        --body_background_color: black;
+    
+        --primary-color: #57e089;
+    }
+
 }
