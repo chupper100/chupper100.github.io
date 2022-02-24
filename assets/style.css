@@ -145,7 +145,7 @@ footer {
     }
 }
 
-@media (prefers-color-scheme) {
+@media (prefers-color-scheme:dark) {
     *{
         --background_color: #121212;
         --text_color: white;
