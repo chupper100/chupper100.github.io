@@ -12,11 +12,13 @@ const assets = [
 ];
 
 self.addEventListener('install', (e) => {
-    console.log('sw has been installed', e);
-    caches.open(staticCacheName).then((cache) => {
-        console.log('Caching shell assets');
-        cache.addAll(assets);
-    });
+    // console.log('sw has been installed', e);
+    e.waitUntil(
+        caches.open(staticCacheName).then((cache) => {
+            console.log('Caching shell assets');
+            cache.addAll(assets);
+        })
+    );
 });
 
 self.addEventListener('activate', (e) => {
