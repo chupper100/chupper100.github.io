@@ -7,8 +7,6 @@ const assets = [
     '/assets/script.js',
     '/assets/style.css',
     '/assets/icons/icon-512.png',
-    'https://fonts.googleapis.com',
-    'https://fonts.gstatic.com',
     'https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap',
 ];
 
@@ -28,4 +26,7 @@ self.addEventListener('activate', (e) => {
 
 self.addEventListener('fetch', (e) => {
     // console.log('fetch event triggered', e);
+    e.respondWith(caches.match(e.request)).then((cacheRes) => {
+        return cacheRes || fetch(e.request);
+    });
 });
