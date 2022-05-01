@@ -1,16 +1,11 @@
 {
-    "name": "chupper100",
-    "short_name": "js13kPWA",
+    "name": "chupper100 Portfolio",
+    "short_name": "chupper100",
     "description": "Progressive Web App that lists games submitted to the A-Frame category in the js13kGames 2017 competition.",
     "icons": [
         {
             "src": "./assets/icons/icon-32.png",
             "sizes": "32x32",
-            "type": "image/png"
-        },
-        {
-            "src": "./assets/icons/icon-512.png",
-            "sizes": "512x512",
             "type": "image/png"
         }
     ],
