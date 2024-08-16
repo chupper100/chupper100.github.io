@@ -8,6 +8,16 @@
             custom-element="amp-base-carousel"
             src="https://cdn.ampproject.org/v0/amp-base-carousel-0.1.js"
         ></script>
+        <script
+            async
+            custom-element="amp-ad"
+            src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"
+        ></script>
+        <script
+            async
+            custom-element="amp-sidebar"
+            src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"
+        ></script>
 
         <title>alfie</title>
         <link
@@ -76,16 +86,96 @@
                 }
             </style></noscript
         >
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+        />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://fonts.googleapis.com/css?family=Raleway"
+        />
+
+        <style>
+            .hamburger {
+                padding-left: 10px;
+            }
+            .sidebar {
+                padding: 10px;
+                margin: 0;
+            }
+            .sidebar > li {
+                list-style: none;
+                margin-bottom: 10px;
+            }
+            .sidebar a {
+                text-decoration: none;
+            }
+            .close-sidebar {
+                font-size: 1.5em;
+                padding-left: 5px;
+            }
+            body {
+                width: auto;
+                margin: 0;
+                padding: 0;
+                font-family: 'Raleway', sans-serif;
+            }
+        </style>
     </head>
     <body>
-        <button on="tap:hello.hide">Goodbye AMPHTML World!</button>
-        <h1 id="hello">alfie</h1>
+        <header class="headerbar">
+            <div
+                role="button"
+                on="tap:sidebar1.toggle"
+                tabindex="0"
+                class="hamburger"
+            >
+                <span class="material-symbols-outlined">menu</span>
+            </div>
+            <a href="/">
+                <span class="material-symbols-outlined">home</span>
+            </a>
+            <h1 id="hello">alfie</h1>
+        </header>
+        <amp-sidebar id="sidebar1" layout="nodisplay" side="left">
+            <div
+                role="button"
+                aria-label="close sidebar"
+                on="tap:sidebar1.toggle"
+                tabindex="0"
+                class="close-sidebar"
+            >
+                ✕
+            </div>
+            <ul class="sidebar">
+                <li><a href="#">Example 1</a></li>
+                <li><a href="#">Example 2</a></li>
+                <li><a href="#">Example 3</a></li>
+            </ul>
+        </amp-sidebar>
         <amp-img
             src="https://picsum.photos/600/400"
             width="600"
             height="400"
             layout="responsive"
         ></amp-img>
+        <amp-ad
+            width="300"
+            height="250"
+            type="doubleclick"
+            data-slot="/35096353/amptesting/image/static"
+        >
+        </amp-ad>
+        <amp-ad
+            width="300"
+            height="250"
+            type="a9"
+            data-aax_size="300x250"
+            data-aax_pubname="test123"
+            data-aax_src="302"
+        >
+        </amp-ad>
         <amp-base-carousel
             loop="true"
             width="600"
