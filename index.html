@@ -1,60 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">
+<html amp lang="en">
     <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>chupper100</title>
-        <script src="./assets/script.js"></script>
-        <link rel="stylesheet" href="./assets/style.css" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
-            rel="stylesheet"
-        />
-        <link rel="manifest" href="chupper100.webmanifest" />
-        <meta name="theme-color" content="#57e089" />
-    </head>
+        <meta charset="utf-8" />
+        <script async src="https://cdn.ampproject.org/v0.js"></script>
+        <script
+            async
+            custom-element="amp-base-carousel"
+            src="https://cdn.ampproject.org/v0/amp-base-carousel-0.1.js"
+        ></script>
 
+        <title>alfie</title>
+        <link
+            rel="canonical"
+            href="https://amp.dev/documentation/guides-and-tutorials/start/create/basic_markup/"
+        />
+        <meta
+            name="viewport"
+            content="width=device-width,minimum-scale=1,initial-scale=1"
+        />
+        <style amp-boilerplate>
+            body {
+                -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+                -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+                -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+                animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            }
+            @-webkit-keyframes -amp-start {
+                from {
+                    visibility: hidden;
+                }
+                to {
+                    visibility: visible;
+                }
+            }
+            @-moz-keyframes -amp-start {
+                from {
+                    visibility: hidden;
+                }
+                to {
+                    visibility: visible;
+                }
+            }
+            @-ms-keyframes -amp-start {
+                from {
+                    visibility: hidden;
+                }
+                to {
+                    visibility: visible;
+                }
+            }
+            @-o-keyframes -amp-start {
+                from {
+                    visibility: hidden;
+                }
+                to {
+                    visibility: visible;
+                }
+            }
+            @keyframes -amp-start {
+                from {
+                    visibility: hidden;
+                }
+                to {
+                    visibility: visible;
+                }
+            }
+        </style>
+        <noscript
+            ><style amp-boilerplate>
+                body {
+                    -webkit-animation: none;
+                    -moz-animation: none;
+                    -ms-animation: none;
+                    animation: none;
+                }
+            </style></noscript
+        >
+    </head>
     <body>
-        <div class="wrapper">
-            <nav>
-                <ul class="nav_links">
-                    <li><a href="#about-me">About Me</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="content">
-                <div id="intro">
-                    <div class="text">
-                        <h2>Hi, I am Dat</h2>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Doloremque velit, quas similique ad,
-                            praesentium rerum tempora eligendi saepe ut eum,
-                            excepturi exercitationem at itaque blanditiis?
-                        </p>
-                    </div>
-                    <img
-                        style="float: right; margin: 0px 50px"
-                        src="data:image/jpeg;base64,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"
-                        alt="img"
-                    />
-                </div>
-                <div id="about-me">
-                    <div class="text">
-                        <h1>About Me</h1>
-                    </div>
-                </div>
-                <div id="contact">
-                    <div class="text">
-                        <h1>Contact</h1>
-                    </div>
-                </div>
-            </div>
-            <footer></footer>
-        </div>
-        <script src="./assets/js/app.js"></script>
+        <button on="tap:hello.hide">Goodbye AMPHTML World!</button>
+        <h1 id="hello">alfie</h1>
+        <amp-img
+            src="https://picsum.photos/600/400"
+            width="600"
+            height="400"
+            layout="responsive"
+        ></amp-img>
+        <amp-base-carousel
+            loop="true"
+            width="600"
+            height="400"
+            layout="responsive"
+        >
+            <amp-img
+                src="https://picsum.photos/600/400"
+                width="600"
+                height="400"
+                layout="responsive"
+            ></amp-img>
+            <amp-img
+                src="https://picsum.photos/600/400"
+                width="600"
+                height="400"
+                layout="responsive"
+            ></amp-img>
+            <amp-img
+                src="https://picsum.photos/600/400"
+                width="600"
+                height="400"
+                layout="responsive"
+            ></amp-img>
+            <amp-img
+                src="https://picsum.photos/600/400"
+                width="600"
+                height="400"
+                layout="responsive"
+            ></amp-img>
+        </amp-base-carousel>
     </body>
 </html>
